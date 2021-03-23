@@ -1,0 +1,20 @@
+version: '3'
+services:
+  container:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pymarl
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pymarl
+#    environment:
+#      SC2PATH: /app/StarCraftII
+#      python: /opt/conda/envs/pymarl/bin/python
+    working_dir: /pymarl
+    volumes:
+      - .:/pymarl
+    command: /opt/conda/envs/pymarl/bin/python src/main.py --config=qmix --env-config=sc2 with env_args.map_name=2s3z
+#    command: /opt/conda/envs/pymarl/bin/python -m pdb src/main.py --config=qmix --env-config=sc2 with env_args.map_name=2s3z
