@@ -1,0 +1,13 @@
+
+env: WrappedTrafficJunction
+
+env_args:
+  step_cost: -0.01
+
+learner_log_interval: 100
+log_interval: 100
+runner_log_interval: 100
+t_max: 40050000
+test_interval: 200
+test_nepisode: 24
+test_greedy: True

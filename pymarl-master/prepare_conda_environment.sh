@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 # Create env and install dependencies
-conda create --name pymarl python=3.7
-conda activate pymarl
-conda install pytorch torchvision
+#conda create --name pymarl python=3.7
+#conda activate pymarl
+
+conda install --name pymarl pytorch torchvision
 python -m pip install numpy scipy pyyaml matplotlib imageio tensorboard-logger pygame setuptools snakeviz pytest probscale sacred
 
 # Install SMAC and QPLEX SMAC MATRIX GAMES
