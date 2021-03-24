@@ -288,7 +288,7 @@ class PredatorPrey(gym.Env):
         for i in range(self.n_agents):
             self._total_episode_reward[i] += rewards[i]
 
-        return self.get_agent_obs(), rewards, self._agent_dones, {'prey_alive': self._prey_alive}
+        return self.get_agent_obs(), rewards, self._agent_dones, {f'prey_{i}_alive':yes for idx, yes in enumerate(self._prey_alive)}
 
     def __get_neighbour_coordinates(self, pos):
         neighbours = []

@@ -86,6 +86,7 @@ class TrafficJunction(gym.Env):
     def get_agent_obs(self):
         _obs = []
         for agent_i in range(self.n_agents):
+            print(self.agent_pos)
             pos = self.agent_pos[agent_i]
 
             # agent id

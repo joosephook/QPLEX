@@ -434,7 +434,7 @@ class Combat(gym.Env):
         for i in range(self.n_agents):
             self._total_episode_reward[i] += rewards[i]
 
-        return self.get_agent_obs(), rewards, self._agent_dones, {'health': self.agent_health}
+        return self.get_agent_obs(), rewards, self._agent_dones, {f'agent {i} health':h for i, h in self.agent_health.items()}
 
     def seed(self, n=None):
         self.np_random, seed = seeding.np_random(n)

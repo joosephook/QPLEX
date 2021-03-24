@@ -10,6 +10,8 @@ from ..utils.action_space import MultiAgentActionSpace
 from ..utils.observation_space import MultiAgentObservationSpace
 from ..utils.draw import draw_grid, fill_cell, draw_cell_outline, draw_circle, write_cell_text
 
+from ..multiagent import MultiAgentWrapper
+
 logger = logging.getLogger(__name__)
 
 

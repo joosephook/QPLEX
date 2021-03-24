@@ -163,6 +163,9 @@ class MultiAgentWrapper(MultiAgentBase):
         self.env.reset()
 
     def step(self, actions) -> (float, float, dict):
+        assert len(actions)
+        actions = list(map(int, actions))# may be torch.tensor
+
         observations, reward, done, info = self.env.step(actions)
         return sum(reward), done, info
 
