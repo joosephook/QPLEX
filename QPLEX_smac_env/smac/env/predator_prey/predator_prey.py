@@ -40,7 +40,7 @@ class PredatorPrey(gym.Env):
     """
     metadata = {'render.modes': ['human', 'rgb_array']}
 
-    def __init__(self, grid_shape=(5, 5), n_agents=2, n_preys=1, prey_move_probs=(0.175, 0.175, 0.175, 0.175, 0.3),
+    def __init__(self, grid_shape=(7, 7), n_agents=4, n_preys=2, prey_move_probs=(0.175, 0.175, 0.175, 0.175, 0.3),
                  full_observable=False, penalty=-0.5, step_cost=-0.01, prey_capture_reward=5, max_steps=100, **kwargs):
         print('Unused kwargs:', kwargs)
         self._grid_shape = grid_shape
