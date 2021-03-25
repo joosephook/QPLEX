@@ -4,8 +4,8 @@
 #conda create --name pymarl python=3.7
 #conda activate pymarl
 
-conda install --name pymarl pytorch torchvision
-python -m pip install numpy scipy pyyaml matplotlib imageio tensorboard-logger pygame setuptools snakeviz pytest probscale sacred
+conda install --name pymarl -c pytorch pytorch torchvision
+python -m pip install numpy scipy pyyaml matplotlib imageio tensorboard-logger pygame setuptools snakeviz pytest probscale sacred gym
 
 # Install SMAC and QPLEX SMAC MATRIX GAMES
 python -m pip install -e smac
