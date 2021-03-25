@@ -1,6 +1,9 @@
 
 env: WrappedCheckers
 
+env_args:
+  step_cost: -0.01
+
 learner_log_interval: 1000
 log_interval: 1000
 runner_log_interval: 1000
